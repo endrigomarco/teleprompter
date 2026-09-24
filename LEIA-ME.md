@@ -9,4 +9,4 @@ Consulte [README.md](README.md) para iniciar, fazer backup e entender a arquitet
 - Endereço: http://localhost:8765.
 - Backup das anotações: `yarn db:export`.
 
-Não é mais necessário executar `server.py`. A versão antiga está preservada em `backups/legacy-before-refactor.tar.gz`.
+A aplicação atual usa Next.js. Não é necessário executar `server.py`.

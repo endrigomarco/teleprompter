@@ -8,8 +8,7 @@ coverage/
 *.tsbuildinfo
 .yarn/
 .pnp.*
-backups/*
-!backups/.gitkeep
+backups/
 data/*
 !data/.gitkeep
 __pycache__/

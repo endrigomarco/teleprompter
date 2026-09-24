@@ -61,10 +61,11 @@ Gera um JSON com todos os projetos, anotações, versões, ordem e projeto selec
 Para um backup completo do PostgreSQL, incluindo migrações e versões:
 
 ```sh
+mkdir -p backups
 docker compose exec -T db sh -c 'pg_dump -U "$POSTGRES_USER" -d "$POSTGRES_DB" -Fc' > backups/database.dump
 ```
 
-A versão Python original e o JSON anterior à migração estão em `backups/legacy-before-refactor.tar.gz`. Esse arquivo é uma cópia de segurança, não participa da execução atual.
+A pasta `backups/` é criada sob demanda pelos comandos de exportação e backup e fica fora do Git.
 
 A aplicação permanece local e sem publicação. A interface e a API REST continuam sem login. A estrutura está pronta para evoluir, mas acesso público e múltiplos usuários exigiriam uma etapa própria de autenticação e autorização.
 
