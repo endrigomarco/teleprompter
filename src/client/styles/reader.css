@@ -1,0 +1,103 @@
+.reader {
+  background: #141c2b;
+  color: #f0f3fa;
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+  min-width: 0;
+}
+.reader-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  padding: 27px 32px 22px;
+}
+.reader .eyebrow {
+  color: #8ea3c6;
+}
+h2 {
+  font-size: 1.15rem;
+  margin: 8px 0 0;
+  font-weight: 550;
+  overflow-wrap: anywhere;
+}
+#reading-state {
+  font-size: 0.75rem;
+  color: #aab8d0;
+  white-space: nowrap;
+}
+.controls {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px;
+  padding: 16px 24px;
+  border-block: 1px solid #2a3549;
+  background: #192233;
+}
+.controls button {
+  border: 1px solid #3d4b63;
+  border-radius: 6px;
+  padding: 9px 12px;
+  color: #e4eaff;
+  background: transparent;
+  font-size: 0.875rem;
+}
+.controls .primary {
+  background: #c2d1ff;
+  border-color: #c2d1ff;
+  color: #17223c;
+  font-weight: 650;
+  min-width: 96px;
+}
+.controls label {
+  font-size: 0.75rem;
+  color: #aebed7;
+  display: flex;
+  gap: 7px;
+  align-items: center;
+}
+.controls input {
+  width: 68px;
+  accent-color: #a7beff;
+}
+.controls output {
+  min-width: 20px;
+  font-variant-numeric: tabular-nums;
+}
+.viewport {
+  flex: 1;
+  min-height: 0;
+  overflow-y: auto;
+  scrollbar-color: #43516a #141c2b;
+  overscroll-behavior: contain;
+}
+#content {
+  font-size: 34px;
+  line-height: 1.75;
+  letter-spacing: 0.005em;
+  max-width: 850px;
+  padding: 42px 48px 55vh;
+  margin: 0 auto;
+  overflow-wrap: anywhere;
+  white-space: pre-wrap;
+}
+.reader-placeholder {
+  font-size: 1.5rem;
+  line-height: 1.8;
+  color: #91a1ba;
+  margin: 0;
+}
+.reader-footer {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  border-top: 1px solid #2a3549;
+  color: #8fa1be;
+  font-size: 0.75rem;
+  padding: 15px 28px;
+}
+#progress {
+  font-variant-numeric: tabular-nums;
+}

@@ -1,0 +1,91 @@
+.move-col {
+  width: 36px;
+}
+.actions-col {
+  width: 66px;
+}
+.title-col {
+  width: 29%;
+}
+.description-col {
+  width: 39%;
+}
+.tags-col {
+  width: 32%;
+}
+th:first-child,
+td:first-child {
+  padding-left: 8px;
+  padding-right: 2px;
+}
+td:nth-child(2) {
+  color: #243044;
+}
+td:nth-child(3) {
+  color: #64738a;
+}
+td:last-child {
+  padding-left: 4px;
+  padding-right: 8px;
+}
+.drag-handle {
+  cursor: grab;
+  touch-action: none;
+  font-size: 1.4rem;
+  color: #7a8aa2;
+  padding: 0 3px;
+  user-select: none;
+}
+.drag-handle:active {
+  cursor: grabbing;
+}
+.drag-handle:disabled {
+  cursor: default;
+}
+.delete-button {
+  color: #a43a42;
+  font-size: 0.75rem;
+  font-weight: 500;
+  padding: 4px 0;
+}
+tr.dragging {
+  opacity: 0.45;
+}
+tr.drop-before {
+  box-shadow: inset 0 3px #486cdb;
+}
+tr.drop-after {
+  box-shadow: inset 0 -3px #486cdb;
+}
+.danger-button {
+  background: #b73540 !important;
+  color: white !important;
+  border: 0 !important;
+  border-radius: 6px;
+  padding: 10px 14px;
+}
+#delete-dialog {
+  max-width: 460px;
+}
+#delete-description {
+  line-height: 1.6;
+  overflow-wrap: anywhere;
+}
+#delete-error {
+  color: #a62929;
+  font-size: 0.875rem;
+}
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+.library-footer {
+  display: block;
+}

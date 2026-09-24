@@ -1,0 +1,27 @@
+name: interview-teleprompter-tests
+services:
+  test-db:
+    image: postgres:18-alpine
+    environment:
+      POSTGRES_USER: test
+      POSTGRES_PASSWORD: test-only-local
+      POSTGRES_DB: teleprompter_test
+    tmpfs:
+      - /var/lib/postgresql
+    healthcheck:
+      test: ['CMD-SHELL', 'pg_isready -U test -d teleprompter_test']
+      interval: 2s
+      timeout: 3s
+      retries: 20
+  tests:
+    build:
+      context: .
+      dockerfile: docker/app/Dockerfile
+      target: tools
+    environment:
+      DATABASE_URL: postgresql://test:test-only-local@test-db:5432/teleprompter_test
+    depends_on:
+      test-db:
+        condition: service_healthy
+    init: true
+    command: ['yarn', 'test:integration']

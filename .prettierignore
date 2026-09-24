@@ -1,0 +1,8 @@
+node_modules
+.next
+data
+backups
+yarn.lock
+.yarn
+migrations
+next-env.d.ts

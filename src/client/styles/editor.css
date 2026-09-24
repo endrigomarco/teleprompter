@@ -1,0 +1,35 @@
+.edit-button {
+  display: block;
+  color: #486cdb;
+  font-size: 0.75rem;
+  font-weight: 500;
+  padding: 4px 0;
+  margin-bottom: 6px;
+}
+
+.content-label {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 10px;
+}
+.content-label label {
+  font-size: 0.875rem;
+  font-weight: 600;
+}
+#format-content {
+  font-size: 0.75rem;
+  color: #3b59b5;
+  background: #edf2ff;
+  border: 1px solid #d3dffd;
+  border-radius: 5px;
+  padding: 6px 9px;
+}
+#format-content:hover {
+  background: #dfe8ff;
+}
+#format-status:empty {
+  display: none;
+}

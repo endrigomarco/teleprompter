@@ -1,0 +1,88 @@
+.change-project-button,
+.project-actions button {
+  border: 1px solid #cbd4e2;
+  border-radius: 6px;
+  background: white;
+  color: #40567a;
+  padding: 10px 12px;
+  font: inherit;
+  font-size: 0.875rem;
+}
+.project-help {
+  color: #68758a;
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+.project-list {
+  list-style: none;
+  padding: 0;
+  margin: 18px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.project-list li {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  border: 1px solid #dce3ef;
+  border-radius: 8px;
+  padding: 12px;
+}
+.project-list li.active {
+  border-color: #486cdb;
+  background: #f2f5ff;
+}
+.project-select {
+  display: flex;
+  flex: 1;
+  min-width: 0;
+  flex-direction: column;
+  gap: 6px;
+  border: 0;
+  background: transparent;
+  text-align: left;
+  color: #243044;
+  padding: 6px;
+  font: inherit;
+  overflow-wrap: anywhere;
+}
+.project-select span,
+.project-select small {
+  color: #68758a;
+  white-space: pre-wrap;
+}
+.project-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.project-form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.project-form input,
+.project-form textarea {
+  font: inherit;
+  width: 100%;
+  padding: 11px;
+  border: 1px solid #cbd4e2;
+  border-radius: 6px;
+  color: #243044;
+  background: #fafbfe;
+}
+.project-form textarea {
+  resize: vertical;
+}
+.project-error {
+  background: #fff0f0;
+  color: #a62929;
+  padding: 12px;
+  border-radius: 6px;
+}
+.form-actions > .project-danger {
+  background: #b02a37;
+  color: white;
+  border-color: #b02a37;
+}

@@ -1,0 +1,77 @@
+.reader-search {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px;
+  padding: 12px 24px;
+  border-bottom: 1px solid #2a3549;
+  background: #192233;
+}
+.reader-search input {
+  flex: 1;
+  min-width: 120px;
+  background: #141c2b;
+  border: 1px solid #43516a;
+  border-radius: 6px;
+  color: #f0f3fa;
+  padding: 9px 11px;
+  font-size: 0.875rem;
+}
+.reader-search input::placeholder {
+  color: #aab8d0;
+}
+.reader-search button {
+  background: #253248;
+  border: 1px solid #43516a;
+  border-radius: 5px;
+  color: #e4eaff;
+  padding: 6px 11px;
+}
+.reader-search small,
+#reader-search-count {
+  color: #aab8d0;
+  font-size: 0.75rem;
+}
+#reader-search-count {
+  font-variant-numeric: tabular-nums;
+  min-width: 28px;
+  text-align: center;
+}
+#content mark {
+  background: #514820;
+  color: #fff3bf;
+  border-radius: 3px;
+}
+#content mark.current-match {
+  background: #ffdb70;
+  color: #172033;
+  outline: 2px solid #ffdb70;
+}
+
+.controls .reader-search {
+  margin-left: auto;
+  flex: 1 1 310px;
+  min-width: 0;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  flex-wrap: nowrap;
+}
+.controls .reader-search input {
+  width: auto;
+  min-width: 90px;
+}
+.controls .reader-search button {
+  padding: 6px 9px;
+}
+.controls .reader-search #reader-search-count {
+  white-space: nowrap;
+}
+.controls .reader-search small {
+  white-space: nowrap;
+}
+@media (max-width: 1100px) {
+  .controls .reader-search {
+    flex-basis: 100%;
+  }
+}

@@ -1,0 +1,44 @@
+{
+  "name": "interview-teleprompter",
+  "version": "1.0.0",
+  "private": true,
+  "engines": {
+    "node": ">=24 <25"
+  },
+  "scripts": {
+    "dev": "next dev --hostname 127.0.0.1 --port 8765",
+    "build": "next build",
+    "start": "next start --hostname 127.0.0.1 --port 8765",
+    "start:container": "next start --hostname 0.0.0.0 --port 3000",
+    "typecheck": "tsc --noEmit",
+    "test": "tsx --test tests/*.test.ts",
+    "test:integration": "tsx --test tests/*.integration.ts",
+    "db:up": "docker compose up -d --wait db",
+    "db:migrate": "tsx scripts/migrate.ts",
+    "db:seed": "tsx scripts/seed.ts",
+    "db:export": "tsx scripts/export.ts",
+    "setup": "yarn db:up && yarn db:migrate && yarn db:seed",
+    "check": "yarn typecheck && yarn test",
+    "format": "prettier --write src scripts tests migrations docs *.json *.ts *.yaml *.md \"docker/**/*.yaml\"",
+    "format:check": "prettier --check src scripts tests migrations docs *.json *.ts *.yaml *.md \"docker/**/*.yaml\"",
+    "mcp:setup": "tsx scripts/configure-mcp.ts"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "1.30.1",
+    "next": "16.3.6",
+    "pg": "8.23.0",
+    "react": "19.3.0",
+    "react-dom": "19.3.0",
+    "zod": "^4.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "^24.0.0",
+    "@types/pg": "^8.15.0",
+    "@types/react": "^19.0.0",
+    "@types/react-dom": "^19.0.0",
+    "prettier": "^3.9.8",
+    "tsx": "^4.20.0",
+    "typescript": "^5.9.0"
+  },
+  "packageManager": "yarn@4.9.2"
+}
